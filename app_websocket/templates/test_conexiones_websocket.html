@@ -6,16 +6,68 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <style type="text/css">
+    p{
+      font-size: 20px;
+    }
+  </style>
   <body>
-      <h2>Response data</h2>
-      <div id="info" style="font-size: 20px; overflow: hidden; position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
 
-      </div>
+      <section>
+        <h1>This is a small example where websocket messages are sent and received every second for 2 minutes.</h1>
+
+        <h2>The workflow is as follows:</h2>
+
+        <p>
+        <strong>Step 1</strong>
+        <br>
+          In a django view <br>
+          <strong>def test_connections_websocket_view()</strong> <br>
+          we command to execute the task in the background <br>
+          <strong>tasks = test_connections_websocket_tasks.delay()</strong>
+        </p>
+
+        <p>
+          <strong>Step 2</strong> <br>
+          This task returns a task.id (UUID Process). <br>
+          which is rendered on the client side (Browser).
+        </p>
+
+        <p>
+          <strong>Paso 3</strong> <br>
+          On the client side with Javascript.<br>
+          we import our modules
+          <ul>
+            <li>script type="text/javascript" src="/static/js/ws4redis.js"</li>
+            <li>script type="text/javascript" src="/static/js/websocket.js"</li>
+          </ul>
+        </p>
+
+        <p>
+          <strong>Step 4</strong> <br>
+          we retrieve the task.id<br>
+          These modules together with the task.id, we open the websocket connection<br>
+          to be able to receive/send messages ws
+        </p>
+
+        <p>
+          <strong>Step 5</strong> <br>
+          in the tasks we are updating the status of the task in "PROGRESS"
+          as you can see in project_websocket/app_websocket/tasks.py line 32 file
+          <br>
+          When the task.id has a status "DONE"<br>
+          it means that I am finished and we return data
+        </p>
+
+      <h2>Response data</h2>
+      <div id="info" style="font-size: 20px;"></div>
+
+
+      </section>
 
   </body>
   <input id="WEBSOCKET_URI" type="hidden" value="{{URL_WEBSOCKET}}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src=""></script>
   <script type="text/javascript" src="{% static 'js/ws4redis.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/websocket.js' %}"></script>
 
@@ -25,9 +77,8 @@
 
   // To make the connection through websocket and obtain data, call the following function. 
   // Receive as argument: facility
-  task_adminolt_ajax(key_facility)  //This function is defined in the file. <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"><script>
-
-
+  //This function is defined in the file. <script type="text/javascript" src="js/websocket.js"><script>
+  task_adminolt_ajax(key_facility)
 
   //Once the connection to the websocket was successful and the status is "DONE"
   //You can use data inside the function. Passing data as argument
