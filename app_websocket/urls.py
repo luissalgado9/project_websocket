@@ -1,8 +1,8 @@
 from django.contrib.auth.decorators import login_required, permission_required
 from django.urls import path
 
-from app_websocket.views import view_webscoket
+from app_websocket.views import test_conexiones_websocket_view
 
 urlpatterns = [
-    path('', view_webscoket, name="view_webscoket"),
+    path('', test_conexiones_websocket_view, name="test_conexiones_websocket_view"),
 ]

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h2>Response data</h2>
+      <div id="info" style="font-size: 20px; overflow: hidden; position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+
+      </div>
+
+  </body>
+  <input id="WEBSOCKET_URI" type="hidden" value="{{URL_WEBSOCKET}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="{% static 'js/ws4redis.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/websocket.js' %}"></script>
+
+  <script type="text/javascript">
+
+  var key_facility = "{{facility}}" // facility
+
+  // To make the connection through websocket and obtain data, call the following function. 
+  // Receive as argument: facility
+  task_adminolt_ajax(key_facility)  //This function is defined in the file. <script type="text/javascript" src="https://adminolt.com/static/js/websocket-adminolt.js"><script>
+
+
+
+  //Once the connection to the websocket was successful and the status is "DONE"
+  //You can use data inside the function. Passing data as argument
+  function task_custom_done(data){
+
+    // Remove the loader component when returning data.
+    $(".loading-gif, .jobstatic-panel").hide();
+    $("#content-loading-gif").hide();
+
+    // response data
+    console.log(data)
+    const info = document.getElementById("info")
+    info.innerHTML = JSON.stringify(data);
+  }
+
+  </script>
