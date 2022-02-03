@@ -37,6 +37,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app_websocket',
+    'django.contrib.sites',
+    'django_celery_beat',
+    'django_crontab',
+    'django_celery_results',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'corsheaders',
+    'django_filters',
+    'phonenumber_field',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'stdimage',
+    'widget_tweaks',
+    'ws4redis',
 ]
 
 MIDDLEWARE = [
@@ -99,6 +115,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Celery settings
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+#CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
+
+#: Only add pickle to this list if your broker is secured
+#: from unwanted access (see userguide/security.html)
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+#CELERY_ENABLE_UTC=True
+CELERY_TASK_RESULT_EXPIRES = 604800 # 7 dias
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
