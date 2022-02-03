@@ -32,7 +32,7 @@ def test_conexiones_websocket_tasks(self):
     publish_message_websocket(redis_publisher, meta)
 
     start_time = time.time()
-    seconds = 120  # 2 minutes
+    seconds = 20  # 2 minutes
     while True:
         current_time = time.time()
         elapsed_time = current_time - start_time
@@ -41,7 +41,7 @@ def test_conexiones_websocket_tasks(self):
             meta = {'mensaje': "Starting....", "status": "PROGRESS", "task_id": self.request.id}
             publish_message_websocket(redis_publisher, meta)
 
-        time.sleep(5)
+        time.sleep(1)
         count = count + 1
         meta = {'mensaje': "Message # {0}".format(count), "status": "PROGRESS", "task_id": self.request.id}
         publish_message_websocket(redis_publisher, meta)
