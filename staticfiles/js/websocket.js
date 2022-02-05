@@ -12,8 +12,8 @@ let div_error = "<div id='task_error_result' class='alert alert-danger' role='al
 let div_jobstatic = '<div class="jobstatic-panel" class="modal" style="display: none; position: fixed; z-index: 30; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.1);">'+
                         '<div id="caption" style="margin: auto; display: block; width: 100%; max-width: 900px; text-align: center; color: #ccc; padding: 15px 0; height: 250px;">'+
                             '<div style="background: white; margin: 0; top: 60px; padding: 15px; position: relative; text-align: center;">'+
-                                '<p class="title-job" style="color: black; font-size: 14px;"><i class="fa fa-hourglass-start"></i><span> Un momento por favor procesando tarea.</span></p>'+
-                                '<h5 class="jobstatic-result">Si este mensaje no se actualiza en 2 minutos favor de reportarlo.</h5>'+
+                                '<h2 class="title-job" style="color: black; font-size: 14px;"><i class="fa fa-hourglass-start"></i><span>One moment please processing task.</span></h2>'+
+                                '<h3 class="jobstatic-result" style="color: green;" >Si este mensaje no se actualiza en 2 minutos favor de reportarlo.</h3>'+
                             '</div>'+
                         '</div>'+
                     '</div>';

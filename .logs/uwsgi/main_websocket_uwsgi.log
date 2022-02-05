@@ -1,0 +1,856 @@
+*** Starting uWSGI 2.0.20 (64bit) on [Fri Feb  4 17:33:57 2022] ***
+compiled with version: 7.5.0 on 27 January 2022 20:04:25
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x556171653f90
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x556171653f90 pid: 10583 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10583)
+spawned uWSGI worker 1 (pid: 10587, cores: 1000)
+*** running gevent loop engine [addr:0x55616fc550d0] ***
+SIGINT/SIGTERM received...killing workers...
+Brutally killing worker 1 (pid: 10587)...
+Fri Feb  4 22:49:42 2022 - stopping gevent signals watchers for worker 1 (pid: 10587)...
+Fri Feb  4 22:49:42 2022 - stopping gevent sockets watchers for worker 1 (pid: 10587)...
+Fri Feb  4 22:49:42 2022 - main gevent watchers stopped for worker 1 (pid: 10587)...
+goodbye to the gevent Hub on worker 1 (pid: 10587)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Feb  4 17:49:47 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55b34c3d6e00
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b34c3d6e00 pid: 12736 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12736)
+spawned uWSGI worker 1 (pid: 12740, cores: 1000)
+*** running gevent loop engine [addr:0x55b34ad959e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12740)...
+Fri Feb  4 22:50:47 2022 - stopping gevent signals watchers for worker 1 (pid: 12740)...
+Fri Feb  4 22:50:47 2022 - stopping gevent sockets watchers for worker 1 (pid: 12740)...
+Fri Feb  4 22:50:47 2022 - main gevent watchers stopped for worker 1 (pid: 12740)...
+goodbye to the gevent Hub on worker 1 (pid: 12740)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Feb  4 17:50:49 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x564f83ebbe00
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564f83ebbe00 pid: 12994 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12994)
+spawned uWSGI worker 1 (pid: 12998, cores: 1000)
+*** running gevent loop engine [addr:0x564f82eb79e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12998)...
+Fri Feb  4 22:55:15 2022 - stopping gevent signals watchers for worker 1 (pid: 12998)...
+Fri Feb  4 22:55:15 2022 - stopping gevent sockets watchers for worker 1 (pid: 12998)...
+Fri Feb  4 22:55:15 2022 - main gevent watchers stopped for worker 1 (pid: 12998)...
+goodbye to the gevent Hub on worker 1 (pid: 12998)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Feb  4 18:07:33 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x56188eeafe00
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56188eeafe00 pid: 14572 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14572)
+spawned uWSGI worker 1 (pid: 14576, cores: 1000)
+*** running gevent loop engine [addr:0x56188eaa99e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 14576)...
+Fri Feb  4 23:12:24 2022 - stopping gevent signals watchers for worker 1 (pid: 14576)...
+Fri Feb  4 23:12:24 2022 - stopping gevent sockets watchers for worker 1 (pid: 14576)...
+Fri Feb  4 23:12:24 2022 - main gevent watchers stopped for worker 1 (pid: 14576)...
+goodbye to the gevent Hub on worker 1 (pid: 14576)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Feb  4 18:12:25 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55958790ce00
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55958790ce00 pid: 15249 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15249)
+spawned uWSGI worker 1 (pid: 15254, cores: 1000)
+*** running gevent loop engine [addr:0x5595863c99e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 15254)...
+Fri Feb  4 23:16:30 2022 - stopping gevent signals watchers for worker 1 (pid: 15254)...
+Fri Feb  4 23:16:30 2022 - stopping gevent sockets watchers for worker 1 (pid: 15254)...
+Fri Feb  4 23:16:30 2022 - main gevent watchers stopped for worker 1 (pid: 15254)...
+goodbye to the gevent Hub on worker 1 (pid: 15254)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Feb  4 18:16:34 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x564c08a35e00
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x564c08a35e00 pid: 15845 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15845)
+spawned uWSGI worker 1 (pid: 15849, cores: 1000)
+*** running gevent loop engine [addr:0x564c06ab89e0] ***
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 15849)...
+Fri Feb  4 23:23:54 2022 - stopping gevent signals watchers for worker 1 (pid: 15849)...
+Fri Feb  4 23:23:54 2022 - stopping gevent sockets watchers for worker 1 (pid: 15849)...
+Fri Feb  4 23:23:54 2022 - main gevent watchers stopped for worker 1 (pid: 15849)...
+goodbye to the gevent Hub on worker 1 (pid: 15849)
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock)
+running /home/miguel-wisphub/.local/bin/uwsgi
+[uWSGI] getting INI configuration from app_websocket.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Feb  4 23:23:55 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x5646d30a1a10
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5646d30a1a10 pid: 15845 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 15845)
+spawned uWSGI worker 1 (pid: 16832, cores: 1000)
+*** running gevent loop engine [addr:0x5646d1a5a9e0] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:12:16 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55642fc7ff50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55642fc7ff50 pid: 5021 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5021)
+spawned uWSGI worker 1 (pid: 5025, cores: 1000)
+*** running gevent loop engine [addr:0x55642dd349e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 5025)...
+Sat Feb  5 14:22:47 2022 - stopping gevent signals watchers for worker 1 (pid: 5025)...
+Sat Feb  5 14:22:47 2022 - stopping gevent sockets watchers for worker 1 (pid: 5025)...
+Sat Feb  5 14:22:47 2022 - main gevent watchers stopped for worker 1 (pid: 5025)...
+goodbye to the gevent Hub on worker 1 (pid: 5025)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:22:49 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x560da6afaf50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x560da6afaf50 pid: 6441 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6441)
+spawned uWSGI worker 1 (pid: 6445, cores: 1000)
+*** running gevent loop engine [addr:0x560da5df39e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 6445)...
+Sat Feb  5 14:26:31 2022 - stopping gevent signals watchers for worker 1 (pid: 6445)...
+Sat Feb  5 14:26:31 2022 - stopping gevent sockets watchers for worker 1 (pid: 6445)...
+Sat Feb  5 14:26:31 2022 - main gevent watchers stopped for worker 1 (pid: 6445)...
+goodbye to the gevent Hub on worker 1 (pid: 6445)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:26:36 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55f045383f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f045383f50 pid: 7397 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7397)
+spawned uWSGI worker 1 (pid: 7401, cores: 1000)
+*** running gevent loop engine [addr:0x55f0435ac9e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 7401)...
+Sat Feb  5 14:34:43 2022 - stopping gevent signals watchers for worker 1 (pid: 7401)...
+Sat Feb  5 14:34:43 2022 - stopping gevent sockets watchers for worker 1 (pid: 7401)...
+Sat Feb  5 14:34:43 2022 - main gevent watchers stopped for worker 1 (pid: 7401)...
+goodbye to the gevent Hub on worker 1 (pid: 7401)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:34:44 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55bebfef2f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55bebfef2f50 pid: 8794 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8794)
+spawned uWSGI worker 1 (pid: 8798, cores: 1000)
+*** running gevent loop engine [addr:0x55bebf07e9e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 8798)...
+Sat Feb  5 14:48:30 2022 - stopping gevent signals watchers for worker 1 (pid: 8798)...
+Sat Feb  5 14:48:30 2022 - stopping gevent sockets watchers for worker 1 (pid: 8798)...
+Sat Feb  5 14:48:30 2022 - main gevent watchers stopped for worker 1 (pid: 8798)...
+goodbye to the gevent Hub on worker 1 (pid: 8798)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:48:43 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55c7dce1af50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c7dce1af50 pid: 10743 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10743)
+spawned uWSGI worker 1 (pid: 10748, cores: 1000)
+*** running gevent loop engine [addr:0x55c7db1259e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 10748)...
+Sat Feb  5 14:54:25 2022 - stopping gevent signals watchers for worker 1 (pid: 10748)...
+Sat Feb  5 14:54:25 2022 - stopping gevent sockets watchers for worker 1 (pid: 10748)...
+Sat Feb  5 14:54:25 2022 - main gevent watchers stopped for worker 1 (pid: 10748)...
+goodbye to the gevent Hub on worker 1 (pid: 10748)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:54:32 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55992f188f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55992f188f50 pid: 11500 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11500)
+spawned uWSGI worker 1 (pid: 11504, cores: 1000)
+*** running gevent loop engine [addr:0x55992d0409e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 11504)...
+Sat Feb  5 14:58:37 2022 - stopping gevent signals watchers for worker 1 (pid: 11504)...
+Sat Feb  5 14:58:37 2022 - stopping gevent sockets watchers for worker 1 (pid: 11504)...
+Sat Feb  5 14:58:37 2022 - main gevent watchers stopped for worker 1 (pid: 11504)...
+goodbye to the gevent Hub on worker 1 (pid: 11504)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:58:38 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55d58f1cff50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55d58f1cff50 pid: 11972 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11972)
+spawned uWSGI worker 1 (pid: 11976, cores: 1000)
+*** running gevent loop engine [addr:0x55d58d80f9e0] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:59:45 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x563fde363f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x563fde363f50 pid: 12249 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12249)
+spawned uWSGI worker 1 (pid: 12254, cores: 1000)
+*** running gevent loop engine [addr:0x563fdc6519e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 11976)...
+Sat Feb  5 14:59:48 2022 - stopping gevent signals watchers for worker 1 (pid: 11976)...
+Sat Feb  5 14:59:48 2022 - stopping gevent sockets watchers for worker 1 (pid: 11976)...
+Sat Feb  5 14:59:48 2022 - main gevent watchers stopped for worker 1 (pid: 11976)...
+goodbye to the gevent Hub on worker 1 (pid: 11976)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 09:59:50 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x56161c4a0f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x56161c4a0f50 pid: 12291 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12291)
+spawned uWSGI worker 1 (pid: 12295, cores: 1000)
+*** running gevent loop engine [addr:0x56161a5209e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12254)...
+Sat Feb  5 15:01:02 2022 - stopping gevent signals watchers for worker 1 (pid: 12254)...
+Sat Feb  5 15:01:02 2022 - stopping gevent sockets watchers for worker 1 (pid: 12254)...
+Sat Feb  5 15:01:02 2022 - main gevent watchers stopped for worker 1 (pid: 12254)...
+goodbye to the gevent Hub on worker 1 (pid: 12254)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 10:01:03 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55c781f20f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c781f20f50 pid: 12457 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12457)
+spawned uWSGI worker 1 (pid: 12462, cores: 1000)
+*** running gevent loop engine [addr:0x55c780eb99e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12462)...
+Sat Feb  5 15:01:46 2022 - stopping gevent signals watchers for worker 1 (pid: 12462)...
+Sat Feb  5 15:01:46 2022 - stopping gevent sockets watchers for worker 1 (pid: 12462)...
+Sat Feb  5 15:01:46 2022 - main gevent watchers stopped for worker 1 (pid: 12462)...
+goodbye to the gevent Hub on worker 1 (pid: 12462)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12295)...
+Sat Feb  5 15:01:48 2022 - stopping gevent signals watchers for worker 1 (pid: 12295)...
+Sat Feb  5 15:01:48 2022 - stopping gevent sockets watchers for worker 1 (pid: 12295)...
+Sat Feb  5 15:01:48 2022 - main gevent watchers stopped for worker 1 (pid: 12295)...
+goodbye to the gevent Hub on worker 1 (pid: 12295)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+unlink(): No such file or directory [core/uwsgi.c line 1660]
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 10:02:01 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55b8063d9f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55b8063d9f50 pid: 12819 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12819)
+spawned uWSGI worker 1 (pid: 12823, cores: 1000)
+*** running gevent loop engine [addr:0x55b804a0b9e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12823)...
+Sat Feb  5 15:02:12 2022 - stopping gevent signals watchers for worker 1 (pid: 12823)...
+Sat Feb  5 15:02:12 2022 - stopping gevent sockets watchers for worker 1 (pid: 12823)...
+Sat Feb  5 15:02:12 2022 - main gevent watchers stopped for worker 1 (pid: 12823)...
+goodbye to the gevent Hub on worker 1 (pid: 12823)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 10:02:21 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x5586531ebf50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5586531ebf50 pid: 12941 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12941)
+spawned uWSGI worker 1 (pid: 12945, cores: 1000)
+*** running gevent loop engine [addr:0x55865247d9e0] ***
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 10:02:26 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55f7108e7f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f7108e7f50 pid: 12953 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12953)
+spawned uWSGI worker 1 (pid: 12957, cores: 1000)
+*** running gevent loop engine [addr:0x55f70ff5b9e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12957)...
+Sat Feb  5 15:02:28 2022 - stopping gevent signals watchers for worker 1 (pid: 12957)...
+Sat Feb  5 15:02:28 2022 - stopping gevent sockets watchers for worker 1 (pid: 12957)...
+Sat Feb  5 15:02:28 2022 - main gevent watchers stopped for worker 1 (pid: 12957)...
+goodbye to the gevent Hub on worker 1 (pid: 12957)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 12945)...
+Sat Feb  5 15:02:34 2022 - stopping gevent signals watchers for worker 1 (pid: 12945)...
+Sat Feb  5 15:02:34 2022 - stopping gevent sockets watchers for worker 1 (pid: 12945)...
+Sat Feb  5 15:02:34 2022 - main gevent watchers stopped for worker 1 (pid: 12945)...
+goodbye to the gevent Hub on worker 1 (pid: 12945)
+worker 1 buried after 0 seconds
+goodbye to uWSGI.
+unlink(): No such file or directory [core/uwsgi.c line 1660]
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Feb  5 10:02:43 2022] ***
+compiled with version: 7.5.0 on 03 February 2022 15:57:47
+os: Linux-4.15.0-167-generic #175-Ubuntu SMP Wed Jan 5 01:56:07 UTC 2022
+nodename: miguel-wisphub
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+detected binary path: /home/miguel-wisphub/.local/bin/uwsgi
+chdir() to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+your processes number limit is 63305
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+- async cores set to 1000 - fd table size: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock fd 3
+Python version: 3.6.9 (default, Dec  8 2021, 21:08:43)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Set PythonHome to /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+Python main interpreter initialized at 0x55cfe0a33f50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 78380928 bytes (76543 KB) for 1000 cores
+*** Operational MODE: async ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55cfe0a33f50 pid: 13061 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 13061)
+spawned uWSGI worker 1 (pid: 13066, cores: 1000)
+*** running gevent loop engine [addr:0x55cfdf55b9e0] ***
+SIGINT/SIGQUIT received...killing workers...
+Brutally killing worker 1 (pid: 13066)...
+Sat Feb  5 15:12:22 2022 - stopping gevent signals watchers for worker 1 (pid: 13066)...
+Sat Feb  5 15:12:22 2022 - stopping gevent sockets watchers for worker 1 (pid: 13066)...
+Sat Feb  5 15:12:22 2022 - main gevent watchers stopped for worker 1 (pid: 13066)...
+goodbye to the gevent Hub on worker 1 (pid: 13066)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock removed.

@@ -1,0 +1,18 @@
+[uwsgi]
+chdir           = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+module          = project_websocket.wsgi_websockets
+home            = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+master          = true
+no-orphans = true
+die-on-term = true
+http-socket = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock
+chmod-socket    = 666
+memory-report = true
+threads = 1
+processes = 1
+http-websockets = true
+gevent = 1000
+buffer-size=32768
+vacuum = true
+
+#logto= /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/.logs/uwsgi/main_websocket_uwsgi.log

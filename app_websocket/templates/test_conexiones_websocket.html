@@ -68,12 +68,14 @@
   </body>
   <input id="WEBSOCKET_URI" type="hidden" value="{{URL_WEBSOCKET}}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="{% static 'js/ws4redis.js' %}"></script>
-  <script type="text/javascript" src="{% static 'js/websocket.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/ws4redis.js' %}"></script> 
+ <script type="text/javascript" src="{% static 'js/websocket.js' %}"></script>
+  
 
   <script type="text/javascript">
 
   var key_facility = "{{facility}}" // facility
+  console.log(key_facility)
 
   // To make the connection through websocket and obtain data, call the following function. 
   // Receive as argument: facility

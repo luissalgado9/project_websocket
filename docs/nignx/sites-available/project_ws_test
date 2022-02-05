@@ -1,0 +1,50 @@
+upstream nTestWebsocket {
+    server unix://home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_uwsgi.sock;
+}
+server {
+    # Escuchar en el puerto 80
+    listen 80;
+    # Para solicitudes a estos dominios
+    server_name *.projectwebsocket.net projectwebsocket.net;
+    #return 301 https://wisphub.net$request_uri;
+    # Buscar en este directorio los archivos a servir
+    location /static/ {
+        alias /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/staticfiles/;
+        include h5bp/location/expires.conf;
+    }
+    #Archivos subidos por los usuarios
+    # location /media/ {
+    #    alias /home/miguel-wisphub/Documentos/github/bitol/.media/;
+    #    include h5bp/location/expires.conf;
+    #}
+    # Guardar los logs en los siguientes archivos
+    access_log /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/.logs/nginx/app.access.log;
+    error_log /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/.logs/nginx/app.error.log;
+    location / {
+        #proxy_read_timeout 600;
+        #proxy_connect_timeout 600;
+        error_page 413 /documentacion/error-413-37/;
+        include         uwsgi_params;
+        uwsgi_pass nTestWebsocket;
+        proxy_redirect off;
+        client_max_body_size 15M;
+        client_body_buffer_size 256k;
+        proxy_read_timeout 600s;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For
+        $proxy_add_x_forwarded_for;
+    }
+    # WebSocket
+    location /ws/ {
+        include         uwsgi_params;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_pass http://unix:/home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_websocket.sock;
+    }
+    #Codificacion
+    charset utf-8;
+    #Configuracion Basica
+    include h5bp/basic.conf;
+}

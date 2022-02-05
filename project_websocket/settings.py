@@ -25,7 +25,7 @@ SECRET_KEY = 'z=+o@#=g)_u26wse&210b7+6qoup9@u@mt+sk8ptnsyjd6k0#_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -83,7 +83,17 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project_websocket.wsgi.application'
+
+# WS4REDIS
+WEBSOCKET_URL = '/ws/'
+WS4REDIS_CONNECTION = {
+    'host': "127.0.0.1",
+    'port': "6379",
+    'db': "1",
+    'password': ""
+}
+WSGI_APPLICATION = 'ws4redis.django_runserver.application'
+#WSGI_APPLICATION = 'project_websocket.wsgi.application'
 
 
 # Database
@@ -153,13 +163,3 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# WS4REDIS
-WEBSOCKET_URL = '/ws/'
-WS4REDIS_CONNECTION = {
-    'host': "127.0.0.1",
-    'port': "6379",
-    'db': "2",
-    'password': ""
-}
-WSGI_APPLICATION = 'ws4redis.django_runserver.application'
