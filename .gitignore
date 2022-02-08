@@ -1,14 +1,12 @@
-.idea
-.logs
-app_uwsgi.ini
-app_uwsgi.sock
-app_websocket.ini
-app_websocket.sock
+# Project # 
+*.ini
+*.sock
 requirements.txt
 staticfiles
-app_websocket/__pycache__/views.cpython-36.pyc
 
 # Django #
+.idea
+.logs
 *.log
 *.pot
 *.pyc
