@@ -4,11 +4,13 @@
 
 
 
-__1.1__ Crear Fork de proyecto Bitol desde __GITHUB__ y clonarlo vía ssh.
+__1.1__ Crear Fork de project_websocket desde __GITHUB__ y clonarlo vía ssh.
 
 __1.2__ Clonar el proyecto anteriormente forkeado desde tu cuenta.
-`cd ~/Documentos/github`
-`git clone https://github.com:<username>/project_websocket.git`
+```
+cd ~/Documentos/github
+git clone git@github.com:<username>/project_websocket.git
+```
 
 __1.3__ Agregar remoto del proyecto original.
 
@@ -24,11 +26,13 @@ cd ~/Documentos/github
 virtualenv env_project_websocket -p 3.6
 ```
 __1.5__ Activar entorno
-
 `source env_project_websocket/bin/activate`
 
 __1.6__ Instalar dependiencias
+
+    Posicionarse en el proyecto
 ```
+ cd ~/Documentos/github/project_websocket
 pip install -r requirements.txt
 pip freeze
 ```
@@ -47,13 +51,13 @@ __1.7__ Run Project
 
 __Correr proyecto con UWSGI y Nginx__
 
-__Nginx__
+__Configurar Nginx para proyecto__
 __1__ Actualizamos los paquetes e instalamos el nginx
-	
-	cd ~
+
+     cd ~
     sudo apt-get update
     sudo apt-get install nginx
-    
+
 __2__ Configuramos el NGINX
 
 __3__ Crear directorios y archivos para almacenar los logs
@@ -78,13 +82,21 @@ __4__ Crear el archivo de configuración
     sudo ln -s ../sites-available/project_ws_test
 
 __5__ Editar el archivo __project_ws_test__ en sites-available
-    
-    sudo nano /etc/nginx/sites-available/project_ws_test
 
-    Copiar y pegar lo que hay en el archivo __project_ws_test__ ubicado en __docs  > nignx > sites-available__ de este proyecto
+    sudo nano /etc/nginx/sites-available/project_ws_test
+    Copiar y pegar lo que hay en el archivo __project_ws_test__ ubicado en __docs  > nignx >        sites-available__ de este proyecto
 
 __NOTA__ cambiar rutas en __server unix__, __/static/__, __/media/__, __access_log__, __error_log__, __proxy_pass__ y __http://unix__
-    
+
+__6__ Hostear dominio
+
+    El archivo anterior project_ws_test cuenta con el dominio
+    projectwebsocket.net
+    Hostearlo, abrir una terminal ejecutar comando:
+    sudo nano /etc/hosts
+    Agregar:
+    127.0.0.1   projectwebsocket.net
+
 __6__ Reiniciar NGINX
 
     sudo nginx -t
@@ -96,15 +108,18 @@ __Configuramos el UWSGI__
 
     cd ~/Documentos/github/project_websocket
 
-__1__ Crear el archivo __bitol_uwsgi.ini__ y pegar lo que hay en el archivo __app_uwsgi.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
-
-uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_uwsgi.ini
+__1__ Crear el archivo __app_uwsgi.ini__ y pegar lo que hay en el archivo __app_uwsgi.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
 
 __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
+
+__1.1__ Run servicio uwsgi
+`uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_uwsgi.ini`
 
 
 __2__ Crear el archivo __app_websocket.ini__ y pegar lo que hay en el archivo __app_websocket.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
 
-uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_websocket.ini
-
 __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
+
+__2.1__ Run servicio uwsgi
+`uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_websocket.ini`
+
