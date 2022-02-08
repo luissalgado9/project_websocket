@@ -142,9 +142,9 @@ __NOTA:__ Cambiar las variables __ExecStart__ por la ruta del archivo __app_webs
 
 __3__ Iniciamos el servicio
 ```
-sudo systemctl restart bitol app_websocket
-sudo systemctl status bitol app_websocket
+sudo systemctl restart app_websocket
+sudo systemctl status app_websocket
 
-sudo systemctl restart bitol project_websocket_sock
-sudo systemctl status bitol project_websocket_sock
+sudo systemctl restart app_websocket_sock
+sudo systemctl status app_websocket_sock
 ```
