@@ -123,3 +123,28 @@ __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por
 __2.1__ Run servicio uwsgi
 `uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_websocket.ini`
 
+__Correr como servicio el UWSGI__
+__1__
+    Crear archivo
+`sudo nano /etc/systemd/system/app_websocket.service`
+
+y pegar lo que hay en el archivo __app_service_default.txt__ ubicado en __docs > systemd de este proyecto
+
+__NOTA:__ Cambiar las variables __ExecStart__ por la ruta del archivo __app_uwsgi.ini__ de este proyecto
+
+__2__
+    Crear archivo
+`sudo nano /etc/systemd/system/project_websocket_sock.service`
+
+y pegar lo que hay en el archivo __app_websocket_service_default.txt__ ubicado en __docs > systemd de este proyecto
+
+__NOTA:__ Cambiar las variables __ExecStart__ por la ruta del archivo __app_websocket.ini__ de este proyecto
+
+__3__ Iniciamos el servicio
+```
+sudo systemctl restart bitol app_websocket
+sudo systemctl status bitol app_websocket
+
+sudo systemctl restart bitol project_websocket_sock
+sudo systemctl status bitol project_websocket_sock
+```
