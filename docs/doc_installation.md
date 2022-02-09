@@ -48,7 +48,7 @@ __1.7__ Run Project
      python3 manage.py runserver
 
 
-### Correr proyecto con UWSGI y Nginx
+### Configurar Nginx
 
 __Configurar Nginx para proyecto__
 __1__ Actualizamos los paquetes e instalamos el nginx
