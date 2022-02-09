@@ -92,11 +92,12 @@ __6__ Hostear dominio
     El archivo anterior project_ws_test cuenta con el dominio
     projectwebsocket.net
     Hostearlo, abrir una terminal ejecutar comando:
+
     sudo nano /etc/hosts
     Agregar:
     127.0.0.1   projectwebsocket.net
 
-__6__ Reiniciar NGINX
+__7__ Reiniciar NGINX
 
     sudo nginx -t
     sudo service nginx restart
@@ -185,11 +186,6 @@ keys *
 __2. En otra terminal__
 
     Matar proceso del worker, para esto el worker 
-    celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"
-    debe de estar corriendo ya sea dentro del entorno o con supervisorctl
-
-    Buscar proceso
-
 ```
 ps ax | grep celery_websocket
 sudo kill -9 PID
@@ -199,3 +195,37 @@ sudo kill -9 PID
 __3. Volver a reinciar el worker__
 
 `celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"`
+
+    Si esta corriendo con supervisorctl
+```
+sudo supervisorctl restart cProjectWebsocket
+sudo supervisorctl restart cFlower
+```
+
+
+### Probar el proyecto en produccion
+
+    # Hostear ip del servidor en local
+    sudo nano /etc/hosts
+    # Agregar:
+    IP_SERVIDOR projectwebsocket.net
+
+    # Iniciar proyecto en el navegador
+    projectwebsocket.net
+    http://projectwebsocket.net:6655/dashboard
+    
+
+    # Si se necesita reiniciar los servicios uwsgi
+    sudo systemctl restart app_websocket
+    sudo systemctl status app_websocket
+
+    sudo systemctl restart app_websocket_ws
+    sudo systemctl status app_websocket_ws
+
+
+    # Si necesita reiniciar servicios de celery
+    sudo supervisorctl restart cProjectWebsocket
+    sudo supervisorctl restart cFlower
+
+
+    
