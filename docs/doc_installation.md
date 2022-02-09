@@ -42,7 +42,7 @@ __1.7__ Run Project
      cd ~/Documentos/github/project_websocket
      En una terminal con el entorno activo
 
-     celery worker -A project_websocket --loglevel=INFO -Ofair -P gevent --concurrency=10 --queue=celery_websocket -n="celery_websocket@worker"
+     celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"
      
      En otra terminal con el entorno activo
      python3 manage.py runserver
@@ -104,7 +104,7 @@ __6__ Reiniciar NGINX
     sudo service nginx status
 
 
-__Correr el proyecto con el UWSGI__
+__## Correr el proyecto con el UWSGI ##__
 
     cd ~/Documentos/github/project_websocket
 
@@ -123,7 +123,9 @@ __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por
 __2.1__ Run servicio uwsgi
 `uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_websocket.ini`
 
-__Iniciar UWSGI como servicio systemctl__
+
+
+__## Iniciar UWSGI como servicio systemctl ##__
 __1__. Crear archivo
 `sudo nano /etc/systemd/system/app_websocket.service`
 
@@ -147,3 +149,31 @@ sudo systemctl status app_websocket
 sudo systemctl restart app_websocket_ws
 sudo systemctl status app_websocket_ws
 ```
+
+__## Ver conexiones WS UWSGI ##__
+
+```
+sudo ps ax | grep a app_websocket
+sudo lsof -p PID
+````
+
+__Que hacer si el WORKER se encola__
+
+__1. En una terminal__
+
+```
+redis-cli
+keys *
+flushall
+keys *
+```
+
+__2. En otra terminal__
+```
+ps ax | grep celery_websocket
+sudo kill -9 PID
+```
+
+__3. Volver a reinciar el worker__
+
+`celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"`

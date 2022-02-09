@@ -84,7 +84,8 @@
     // Receive as argument: facility
     //This function is defined in the file. <script type="text/javascript" src="js/websocket.js"><script>
     task_adminolt_ajax(key_facility)
-
+  }
+  
     //Once the connection to the websocket was successful and the status is "DONE"
     //You can use data inside the function. Passing data as argument
     function task_custom_done(data){
@@ -98,7 +99,6 @@
       const info = document.getElementById("info")
       info.innerHTML = JSON.stringify(data);
     }
-  }
 
   var list_facility = {{ list_facility|safe }}  // list of UUID Process, example ["f08409d0-895a-4814-aaa6-36bef0626589", "52af5d02-8a7b-45bd-ac0b-faed72e4722c", ...............]
   console.log(list_facility.length)

@@ -27,4 +27,4 @@ def multiple_connections_websocket(request):
         tasks = test_conexiones_websocket_tasks.delay()
         list_facility.append(tasks.id)
 
-    return render(request, 'multiple_connections.html', {'list_facility': list_facility})
+    return render(request, 'multiple_connections.html', {'list_facility': list_facility, "URL_WEBSOCKET": URL_WEBSOCKET})
