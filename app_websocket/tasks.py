@@ -3,7 +3,7 @@ from ws4redis.publisher import RedisPublisher
 from ws4redis.redis_store import RedisMessage
 import json
 
-@shared_task(bind=True, queue="celery_websocket", soft_time_limit=5000)
+@shared_task(bind=True, queue="celery_websocket", soft_time_limit=1000)
 def test_conexiones_websocket_tasks(self):
     """
     task publish message websocket every 1 seg for 2 minutes.

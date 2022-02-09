@@ -1,5 +1,5 @@
 [Unit]
-Description=uWSGI Bitol WebSocket
+Description=uWSGI AppTestWS
 After=syslog.target
 
 [Service]

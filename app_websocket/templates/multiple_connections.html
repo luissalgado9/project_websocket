@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style type="text/css">
+    p{
+      font-size: 20px;
+    }
+  </style>
+  <body>
+
+      <section>
+        <h1>This is a small example where websocket messages are sent and received every second for 2 minutes.</h1>
+
+        <h2>The workflow is as follows:</h2>
+
+        <p>
+        <strong>Step 1</strong>
+        <br>
+          In a django view <br>
+          <strong>def test_connections_websocket_view()</strong> <br>
+          we command to execute the task in the background <br>
+          <strong>tasks = test_connections_websocket_tasks.delay()</strong>
+        </p>
+
+        <p>
+          <strong>Step 2</strong> <br>
+          This task returns a task.id (UUID Process). <br>
+          which is rendered on the client side (Browser).
+        </p>
+
+        <p>
+          <strong>Paso 3</strong> <br>
+          On the client side with Javascript.<br>
+          we import our modules
+          <ul>
+            <li>script type="text/javascript" src="/static/js/ws4redis.js"</li>
+            <li>script type="text/javascript" src="/static/js/websocket.js"</li>
+          </ul>
+        </p>
+
+        <p>
+          <strong>Step 4</strong> <br>
+          we retrieve the task.id<br>
+          These modules together with the task.id, we open the websocket connection<br>
+          to be able to receive/send messages ws
+        </p>
+
+        <p>
+          <strong>Step 5</strong> <br>
+          in the tasks we are updating the status of the task in "PROGRESS"
+          as you can see in project_websocket/app_websocket/tasks.py line 32 file
+          <br>
+          When the task.id has a status "DONE"<br>
+          it means that I am finished and we return data
+        </p>
+
+      <h2>Response data</h2>
+      <div id="info" style="font-size: 20px;"></div>
+
+
+      </section>
+
+  </body>
+  <input id="WEBSOCKET_URI" type="hidden" value="{{URL_WEBSOCKET}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/ws4redis.js' %}"></script> 
+ <script type="text/javascript" src="{% static 'js/websocket.js' %}"></script>
+  
+
+  <script type="text/javascript">
+
+  function conection_websocket(key_facility){
+    // key_facility UUID of task
+
+    var key_facility = key_facility
+    console.log(key_facility)
+
+    // To make the connection through websocket and obtain data, call the following function. 
+    // Receive as argument: facility
+    //This function is defined in the file. <script type="text/javascript" src="js/websocket.js"><script>
+    task_adminolt_ajax(key_facility)
+
+    //Once the connection to the websocket was successful and the status is "DONE"
+    //You can use data inside the function. Passing data as argument
+    function task_custom_done(data){
+
+      // Remove the loader component when returning data.
+      $(".loading-gif, .jobstatic-panel").hide();
+      $("#content-loading-gif").hide();
+
+      // response data
+      console.log(data)
+      const info = document.getElementById("info")
+      info.innerHTML = JSON.stringify(data);
+    }
+  }
+
+  var list_facility = {{ list_facility|safe }}  // list of UUID Process, example ["f08409d0-895a-4814-aaa6-36bef0626589", "52af5d02-8a7b-45bd-ac0b-faed72e4722c", ...............]
+  console.log(list_facility.length)
+
+  // Open multiple websockets connections
+  for(let i = 0; i < list_facility.length; i++){
+     conection_websocket(list_facility[i])
+  }
+
+
+  </script>

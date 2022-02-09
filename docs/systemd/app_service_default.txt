@@ -1,5 +1,5 @@
 [Unit]
-Description=uWSGI Bitol
+Description=uWSGI AppTest
 After=syslog.target
 
 [Service]
