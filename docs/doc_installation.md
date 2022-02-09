@@ -164,14 +164,14 @@ sudo systemctl restart app_websocket_ws
 sudo systemctl status app_websocket_ws
 ```
 
-__## Ver conexiones WS UWSGI ##__
+### Ver conexiones WS UWSGI
 
 ```
 sudo ps ax | grep a app_websocket
 sudo lsof -p PID
 ````
 
-__Que hacer si el WORKER se encola__
+### Que hacer si el WORKER se encola
 
 __1. En una terminal__
 
@@ -183,10 +183,18 @@ keys *
 ```
 
 __2. En otra terminal__
+
+    Matar proceso del worker, para esto el worker 
+    celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"
+    debe de estar corriendo ya sea dentro del entorno o con supervisorctl
+
+    Buscar proceso
+
 ```
 ps ax | grep celery_websocket
 sudo kill -9 PID
 ```
+
 
 __3. Volver a reinciar el worker__
 
