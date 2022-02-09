@@ -48,8 +48,7 @@ __1.7__ Run Project
      python3 manage.py runserver
 
 
-
-__Correr proyecto con UWSGI y Nginx__
+### Correr proyecto con UWSGI y Nginx
 
 __Configurar Nginx para proyecto__
 __1__ Actualizamos los paquetes e instalamos el nginx
@@ -104,32 +103,47 @@ __6__ Reiniciar NGINX
     sudo service nginx status
 
 
-__## Correr el proyecto con el UWSGI ##__
+### Correr el proyecto con el UWSGI
+
+__1__ Crear logs
+
+    # Posicionarse en el proyecto
+
+    cd ~/Documentos/github/project_websocket
+    mkdir .logs
+    cd .logs
+    mkdir uwsgi
+    cd uwsgi
+    touch main_uwsgi.log
+    touch main_websocket_uwsgi.log
+    chmod 777 main_uwsgi.log
+    chmod 777 main_websocket_uwsgi.log
 
     cd ~/Documentos/github/project_websocket
 
-__1__ Crear el archivo __app_uwsgi.ini__ y pegar lo que hay en el archivo __app_uwsgi.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
-
-__NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
-
-__1.1__ Run servicio uwsgi
-`uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_uwsgi.ini`
-
-
-__2__ Crear el archivo __app_websocket.ini__ y pegar lo que hay en el archivo __app_websocket.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
+__2__ Crear el archivo __app_uwsgi.ini__ y pegar lo que hay en el archivo __app_uwsgi.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
 
 __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
 
 __2.1__ Run servicio uwsgi
+`uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_uwsgi.ini`
+
+
+__3__ Crear el archivo __app_websocket.ini__ y pegar lo que hay en el archivo __app_websocket.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
+
+__NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
+
+__3.1__ Run servicio uwsgi
 `uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_websocket.ini`
 
 
 
-__## Iniciar UWSGI como servicio systemctl ##__
+### Iniciar UWSGI como servicio systemctl
+
 __1__. Crear archivo
 `sudo nano /etc/systemd/system/app_websocket.service`
 
-y pegar lo que hay en el archivo __app_service_default.txt__ ubicado en __docs > systemd de este proyecto
+    y pegar lo que hay en el archivo __app_service_default.txt__ ubicado en __docs > systemd de este proyecto
 
 __NOTA:__ Cambiar las variables __ExecStart__ por la ruta del archivo __app_uwsgi.ini__ de este proyecto
 
@@ -137,7 +151,7 @@ __2__
     Crear archivo
 `sudo nano /etc/systemd/system/app_websocket_ws.service`
 
-y pegar lo que hay en el archivo __app_websocket_service_default.txt__ ubicado en __docs > systemd de este proyecto
+    y pegar lo que hay en el archivo __app_websocket_service_default.txt__ ubicado en __docs > systemd de este proyecto
 
 __NOTA:__ Cambiar las variables __ExecStart__ por la ruta del archivo __app_websocket.ini__ de este proyecto
 
