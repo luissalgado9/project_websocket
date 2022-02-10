@@ -1,10 +1,13 @@
 from django.contrib.auth.decorators import login_required, permission_required
 from django.urls import path
 
-from app_websocket.views import test_conexiones_websocket_view, home_view, multiple_connections_websocket
+from app_websocket.views import test_conexiones_websocket_view, home_view, multiple_connections_websocket, \
+    raw_test_conexiones_websocket_view
 
 urlpatterns = [
     path('', home_view, name="home_view"),
     path('example1-ws', test_conexiones_websocket_view, name="test_conexiones_websocket_view"),
     path('example2-multiple-connections', multiple_connections_websocket, name="multiple_connections_websocket"),
+    path('r/', raw_test_conexiones_websocket_view, name="raw_test_conexiones_websocket_view"),
+    path('r/<int:total>/', raw_test_conexiones_websocket_view, name="raw_test_conexiones_websocket_view"),
 ]
