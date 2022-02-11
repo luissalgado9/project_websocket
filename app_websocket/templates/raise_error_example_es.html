@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,50 +19,50 @@
         <!-- Content here -->
         <div class="row">
           <div class="col">
-              <h3 id="reboot_project">Restart ProyectoWebsocket</h3>
-              <p>Inside the server apply the following commands</p>
-              <h4>Steps to follow</h4>
+              <h3 id="reboot_project">Reiniciar ProyectoWebsocket</h3>
+              <p>Dentro del servidor aplicar los siguientes comandos</p>
+              <h4>Pasos a seguir</h4>
               <ol>
-                  <li>Clear websocket keys on <strong>Redis</strong></li>
+                  <li>Limpiar keys websocket en <strong>Redis</strong></li>
                   <ul>
                     <li>redis-cli</li>
                     <li>keys *</li>
                     <li>flushall</li>
                     <li>keys *</li>
                   </ul>
-                  <li>Kill worker process (PID) <strong>celery_websocket</strong></li>
+                  <li>Eliminar proceso del worker <strong>celery_websocket</strong></li>
                   <ul>
                     <li>ps ax | grep celery_websocket</li>
                     <li>sudo kill -9 PID</li>
                   </ul>
-                  <li>Purge worker <strong>celery_websocket</strong></li>
+                  <li>Purgar worker <strong>celery_websocket</strong></li>
                   <ul>
-                    <li>- We position ourselves on the following route</li>
+                    <li>- Nos posicionamos en la siguente ruta</li>
                     <ul>
                       <li>cd /home/ubuntu/project_websocket</li>
                     </ul>
-                    <li>- We activate the environment</li>
+                    <li>- Activamos el entorno</li>
                     <ul>
                       <li>source env_project_websocket/bin/activate</li>
                       <li>celery -A project_websocket amqp queue.purge celery_websocket</li>
                     </ul>
                   </ul>
-                  <li>Restart <strong>celery</strong> (In case you have the configuration with supervisorctl)</li>
+                  <li>Reiniciar <strong>celery</strong> (En caso de tener la configuracion con supervisorctl)</li>
                   <ul>
                     <li>sudo supervisorctl restart cProjectWebsocket</li>
                     <li>sudo supervisorctl restart cFlower</li>
                   </ul>
-                  <li>Restart project</li>
+                  <li>Reiniciar proyecto</li>
                   <ul>
                     <li>sudo systemctl restart app_websocket</li>
                     <li>sudo systemctl status app_websocket</li>
-                    <li>- Check status</li>
+                    <li>- Verificar el estatus</li>
                     <ul>
                       <li>sudo systemctl restart app_websocket_ws</li>
                       <li>sudo systemctl status app_websocket_ws</li>
                     </ul>
                   </ul>
-                  <li>Clear <strong>log</strong> websocket</li>
+                  <li>Limpiar <strong>log</strong> websocket</li>
                   <ul>
                     <li>cd /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/</li>
                     <li>echo "" > main_websocket_uwsgi.log</li>
@@ -70,44 +70,44 @@
                 </ol>
                 
                 <h3>Raise error - ERROR: Other Exception: filedescriptor out of range in select()</h3>
-                <h4>Steps to follow</h4>
+                <h4>Pasos a seguir</h4>
                 <ol>
-                  <li>We position ourselves in the Node folder</li>
+                  <li>Nos posicionamos en la carpeta de Node</li>
                   <ul>
                     <li>cd ~</li>
                     <li>cd /home/ubuntu/Node-Test-Django-WS4Redis</li>
                   </ul>
 
-                  <li>Run the index.js file with Node</li>
+                  <li>Mandar a ejecutar el archivo index.js con Node</li>
                   <ul>
-                    <li>Specify the number of ws in the --total variable</li>
+                    <li>Especificar el número de ws en la variable --total</li>
                     <li>
-                     <strong>--host</strong>, Corresponds server host.
-                     If not specified, its default value is 'localhost'.
-                     <strong>--total</strong>, Corresponds to the number of websockets to work with.
-                     If not specified, its default value is 1. <br> <strong>Example:</strong> <br>
+                     <strong>--host</strong>, Corresponde host del server.
+                     Si no se especifica su valor por default es 'localhost'.
+                     <strong>--total</strong>, Corresponde al numero de websockets a trabajar.
+                     Si no se especifica su valor por default es 1. <br> <strong>Ejemplo:</strong> <br>
                     </li>
                     
                     <li>node src/index.js --host=projectwebsocket.net --total=15</li>
                   </ul>
 
-                  <li>Save logs - To save the logs to a text file run this command to the above command ">> logs_test01.txt".</li>
+                  <li>Guardar logs - Para guardar los logs en un archivo de texto ejecute esta instruccion al comando anterior ">> logs_test01.txt".</li>
                   <ul>
                      <li>node src/index.js --host=projectwebsocket.net --total=15 >> logs_test01.txt</li>
                   </ul>
                
                 </ol>
 
-                <h3>Find the error in the log</h3>
-                <h4>Steps to follow</h4>
+                <h3>Encontrar el error en el log</h3>
+                <h4>Pasos a seguir</h4>
                 
                 <ol>
-                  <li>View websocket connections</li>
+                  <li>Ver conexiones websocket</li>
                   <ul>
                     <li>sudo ps ax | grep app_websocket</li>
                     <li>lsof -p PID</li>
                   </ul>
-                  <li>See filedescriptor error, when I reach 1024 open filescriptors (ws)</li>
+                  <li>Ver error filedescriptor, cuando alcance los 1024 filescriptor abiertos (ws)</li>
                   <ul>
                     <li class="mb-2">grep -r -i "Too many" /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/main_websocket_uwsgi.log</li>
                     <li class="mb-2">tail -1000 /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/main_websocket_uwsgi.log
