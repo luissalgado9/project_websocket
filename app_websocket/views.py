@@ -46,7 +46,11 @@ def raw_test_conexiones_websocket_view(request, total=None):
 
 
 def document_install_vagrant_node(request):
-    return render(request, 'install_vagrant_node.html', {})
+
+    if request.GET and request.GET.get('language') == 'ES':
+        return render(request, 'install_vagrant_node_es.html', {})        
+
+    return render(request, 'install_vagrant_node_eng.html', {})
 
 def raise_error_example(request):
     title = 'Raise error example'

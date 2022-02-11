@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Instalar Vagrant y Node</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container-fluid">
+        <h1>Install Vagrant and Node</h1>
+        <!-- Content here -->
+        <div class="row">
+          <div class="col">
+              <h3 id="reboot_project">Reboot ProyectoWebsocket</h3>
+              <span>Note: You should already have the project <strong>"Proyecto_Websocket"</strong> cloned and configured <br></span>
+              <span class="mb-2">Installation steps <a href="https://github.com/luissalgado9/project_websocket/blob/master/docs/doc_installation.md" target="_blank">Click here</a></span>
+              <h4 class="mt-4">Steps to follow</h4>
+              <ol>
+                  <li>Clean websocket keys in <strong>Redis</strong></li>
+                  <ul>
+                    <li>redis-cli</li>
+                    <li>keys *</li>
+                    <li>flushall</li>
+                    <li>keys *</li>
+                  </ul>
+                  <li>Remove process from worker <strong>"celery_websocket"</strong></li>
+                  <ul>
+                    <li>ps ax | grep celery_websocket</li>
+                    <li>sudo kill -9 PID</li>
+                  </ul>
+                  <li>Purge worker <strong>"celery_websocket"</strong></li>
+                  <ul>
+                    <li>- We position ourselves on the following route</li>
+                    <ul>
+                      <li>cd ~/Documentos/github</li>
+                    </ul>
+                    <li>- We activate the environment</li>
+                    <ul>
+                      <li>source env_project_websocket/bin/activate</li>
+                      <li>celery -A project_websocket amqp queue.purge celery_websocket</li>
+                    </ul>
+                  </ul>
+                  <li>Restart <strong>celery</strong> (In case of having the configuration with supervisorctl)</li>
+                  <ul>
+                    <li>sudo supervisorctl restart cProjectWebsocket</li>
+                    <li>sudo supervisorctl restart cFlower</li>
+                  </ul>
+                  <li>Restart project</li>
+                  <ul>
+                    <li>sudo systemctl restart app_websocket</li>
+                    <li>sudo systemctl status app_websocket</li>
+                    <li>- Check status</li>
+                    <ul>
+                      <li>sudo systemctl restart app_websocket_ws</li>
+                      <li>sudo systemctl status app_websocket_ws</li>
+                    </ul>
+                  </ul>
+                  <li>Clean websocket <strong>log</strong></li>
+                  <ul>
+                    <li>cd /home/ubuntu/project_websocket/.logs/uwsgi/</li>
+                    <li>echo "" > main_websocket_uwsgi.log</li>
+                  </ul>
+                </ol>
+                
+                <h3>Installation of Vagrant and Node</h3>
+                <h4>Steps to follow</h4>
+                <ol>
+                  <li>Install <strong>vagrant</strong></li>
+                  <ul>
+                    <li>sudo apt-get install virtualbox</li>
+                  </ul>
+                  <li>Download <a href="https://releases.hashicorp.com/vagrant/2.2.18/vagrant_2.2.18_x86_64.deb">.deb vagrant</a>. In case of errors, consult the following <a href="https://wiki.ubuntu.com/UEFI/SecureBoot/DKMS" target="_blank">link</a></li>
+                  <ul>
+                    <li>We position ourselves in the folder, download the .deb and apply: </li>
+                    <li>dpkg -i vagrant_2.2.18_x86_64.deb</li>
+                  </ul>
+                  <li>Clone the Node repository</li>
+                  <ul>
+                    <li>We position ourselves in the folder of your choice and apply:</li>
+                    <li>git clone https://github.com/fernandoperezwh/Node-Test-Django-WS4Redis</li>
+                  </ul>
+                  <li>We position ourselves in the repository</li>
+                  <ul>
+                    <li>cd Node-Test-Django-WS4Redis</li>
+                  </ul>
+                  <li>Start the virtual machine</li>
+                  <ul>
+                    <li>vagrant up</li>
+                    <li>At the end of the process, apply: </li>
+                    <li>vagrant ssh</li>
+                  </ul>
+                </ol>
+
+                <h3>Install Node Version Manager</h3>
+                <h4>Steps to follow</h4>
+                <p>Inside the vagrant virtual machine</p>
+                <ol>
+                  <li>Run the install script. You will need to download and run it manually. Use the following cURL or Wget command</li>
+                  <ul>
+                    <li><strong>cURL: </strong>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</li>
+                    <li><strong>Wget: </strong>wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</li>
+                  </ul>
+                  <li>Check downloaded content. Either in <strong>~/.bashrc or ~/.zshrc</strong> (If not found, then add it manually)</li>
+                  <ul>
+                    <li>- We edit the file</li>
+                    <ul>
+                      <li>sudo nano ~/.bashrc</li>
+                    </ul>
+                    <li>- We check the information</li>
+                    <ul>
+                      <li>export NVM_DIR="$HOME/.nvm"</li>
+                      <li>[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm</li>
+                      <li>[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</li>
+                    </ul>
+                  </ul>
+                  <li>Reload shell configurations</li>
+                  <ul>
+                    <li>source ~/.bashrc</li>
+                  </ul>
+                  <li>Make sure the nvm command is found</li>
+                  <ul>
+                    <li>nvm --version</li>
+                  </ul>
+                </ol>
+
+                <h3>Install Node and NPM</h3>
+                <p>Inside the vagrant virtual machine</p>
+                <h4>Steps to follow</h4>
+                <ol>
+                  <li>Install <strong>Node</strong></li>
+                  <ul>
+                    <li>nvm install 17.1.0</li>
+                  </ul>
+                  <li>Install project dependencies</li>
+                  <ul>
+                    <li>Go to root and run the following command:</li>
+                    <li>cd ~</li>
+                    <li>npm install</li>
+                  </ul>
+                  <li>Host the <strong>domain</strong></li>
+                  <ul>
+                    <li>cd ~</li>
+                    <li>sudo nano /etc/hosts</li>
+                    <li>"public IP" projectwebsocket.net</li>
+                  </ul>
+                </ol>
+
+                <h3>Request <strong>n</strong> websocket requests</h3>
+                <p>Inside the vagrant virtual machine</p>
+                <p>Remember to have applied the steps <a href="#reboot_project">Reboot ProyectoWebsocket</a></p>
+                <ol>
+                  <li>We position ourselves in the vagrant folder</li>
+                  <ul>
+                    <li>cd /vagrant</li>
+                  </ul>
+                  <li>Run the index.js file with Node</li>
+                  <ul>
+                    <li>
+                      node src/index.js
+                    </li>
+                  </ul>
+                  <li>Specify the number of ws</li>
+                  <ul>
+                    <li>This script contains allowed arguments which are:</li>
+                    <p>
+                      --host, Corresponds server host. If not specified, its default value is 'localhost'. <br>
+                      --total, Corresponds to the number of websockets to work. If not specified, its default value is 1..
+                    </p>
+                    <li>Exemple: node src/index.js --host=projectwebsocket.net --total=15</li>
+                  </ul>
+                  <li>Save logs</li>
+                  <ul>
+                    <li>To save the logs in a text file run add this instruction to the previous command ">> logs_test01.txt"</li>
+                    <li>node src/index.js --host=projectwebsocket.net --total=15 >> logs_test01.txt</li>
+                  </ul>
+                </ol>
+          </div>
+        </div>
+      </main>
+  </body>
+</html>
