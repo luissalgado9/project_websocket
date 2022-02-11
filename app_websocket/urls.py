@@ -10,6 +10,7 @@ urlpatterns = [
     path('example2-multiple-connections', multiple_connections_websocket, name="multiple_connections_websocket"),
     path('r/', raw_test_conexiones_websocket_view, name="raw_test_conexiones_websocket_view"),
     path('r/<int:total>/', raw_test_conexiones_websocket_view, name="raw_test_conexiones_websocket_view"),
-    path('raise-error-example', raise_error_example, name="raise_error_example"),
+    path('raise-error-example/', raise_error_example, name="raise_error_example"),
+    path('raise-error-example/<str:language>/', raise_error_example, name="raise_error_example"),
     path('install-vagrant-node', document_install_vagrant_node ,name="install_vagrant_node"),
 ]
