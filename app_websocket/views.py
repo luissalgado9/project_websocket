@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render
 from django.http import JsonResponse
 from .tasks import test_conexiones_websocket_tasks
@@ -42,3 +43,12 @@ def raw_test_conexiones_websocket_view(request, total=None):
         tasks = test_conexiones_websocket_tasks.delay()
         facilities.append(tasks.id)
     return JsonResponse({'list_facility': facilities})
+
+
+def document_install_vagrant_node(request):
+    return render(request, 'install_vagrant_node.html', {})
+
+def raise_error_example(request):
+    title = 'Raise error example'
+
+    return render(request, 'raise_error_example.html', {'title': title,})

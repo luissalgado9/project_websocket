@@ -36,13 +36,15 @@ __1.6__ Instalar dependiencias
 pip install -r requirements.txt
 pip freeze
 ```
-
 __1.7__ Run Project
 
      cd ~/Documentos/github/project_websocket
      En una terminal con el entorno activo
 
+     # Iniciar worker de forma manual
      celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"
+
+     # O con supervisorctl -- Para configurarlo seguir los pasos del archivo: settings_supervisorctl.md ubicado en docs > supervisorctl de este proyecto
      
      En otra terminal con el entorno activo
      python3 manage.py runserver
