@@ -18,9 +18,65 @@
   </div>
 </nav>
 
-<a href="{% url 'test_conexiones_websocket_view' %}" class="btn btn-primary">Example 1 - Send-Received messages</a>
-<a href="{% url 'multiple_connections_websocket' %}" class="btn btn-secondary">Example 2 - Multiple connections WS</a>
-<a href="{% url 'installl_vagrant_node' %}"" class="btn btn-success">Install Vagrant and Node</a>
-<a href="{% url 'raise_error_example' %}" class="btn btn-success">Raise error filedescriptor</a>
+<!--
+<div class="row mb-4">
+  <di class="col">
+    <a href="{% url 'test_conexiones_websocket_view' %}" class="btn btn-primary">Example 1 - Send-Received messages</a>
+    <a href="{% url 'multiple_connections_websocket' %}" class="btn btn-secondary">Example 2 - Multiple connections WS</a>
+    <a href="{% url 'installl_vagrant_node' %}" class="btn btn-success">Install Vagrant and Node</a>
+    <a href="{% url 'raise_error_example' %}" class="btn btn-success">Raise error filedescriptor</a>
+  </di>
+</div>
+
+-->
+
+<!---Menu 2-->
+
+<div class="container fluid">
+  <div class="row">
+    <div class="col-sm-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Example 1 Websocket/WSGI</h5>
+          
+          <a href="{% url 'test_conexiones_websocket_view' %}" class="btn btn-primary">Go example</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Example 2 - Multiple connections WS</h5>
+          
+          <a href="{% url 'multiple_connections_websocket' %}" class="btn btn-primary">Go example</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Install Vagrant and Node</h5>
+          
+          <a href="{% url 'installl_vagrant_node' %}" class="btn btn-success">Go doc</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Raise error filedescriptor</h5>
+          
+          <a href="{% url 'raise_error_example' %}" class="btn btn-success">Go doc</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
 </body>
 </html>
