@@ -36,7 +36,12 @@ __1.6__ Instalar dependiencias
 pip install -r requirements.txt
 pip freeze
 ```
-__1.7__ Run Project
+
+__1.7__ Aplicar migraciones
+
+`python manage.py collectstatic`
+
+__1.8__ Run Project
 
      cd ~/Documentos/github/project_websocket
      En una terminal con el entorno activo
@@ -129,7 +134,7 @@ __2__ Crear el archivo __app_uwsgi.ini__ y pegar lo que hay en el archivo __app_
 __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
 
 __2.1__ Run servicio uwsgi
-`uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_uwsgi.ini`
+`uwsgi --ini /home/miguel/Documentos/github/project_websocket/app_uwsgi.ini`
 
 
 __3__ Crear el archivo __app_websocket.ini__ y pegar lo que hay en el archivo __app_websocket.ini_default__ ubicado en __docs > uwsgi__ de este proyecto
@@ -137,7 +142,7 @@ __3__ Crear el archivo __app_websocket.ini__ y pegar lo que hay en el archivo __
 __NOTA:__ Cambiar las variables __chdir__, __module__, __home__ y __socket__ por las del proyecto
 
 __3.1__ Run servicio uwsgi
-`uwsgi --ini /home/miguel-wisphub/Documentos/github/project_websocket/app_websocket.ini`
+`uwsgi --ini /home/miguel/Documentos/github/project_websocket/app_websocket.ini`
 
 
 

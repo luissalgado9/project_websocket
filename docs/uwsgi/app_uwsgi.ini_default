@@ -1,15 +1,15 @@
 
 [uwsgi]
 
-chdir           = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket
+chdir           = /home/miguel/Documentos/Projects_Test/Project_WS/project_websocket
 module          = project_websocket.wsgi
-home            = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/env_project_websocket
+home            = /home/miguel/Documentos/Projects_Test/Project_WS/env_project_websocket
 enable-threads  = true
 single-interpreter = true
 master          = true
 processes       = 3
 # the socket (use the full path to be safe
-socket          = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/app_uwsgi.sock
+socket          = /home/miguel/Documentos/Projects_Test/Project_WS/project_websocket/app_uwsgi.sock
 chmod-socket    = 666
 vacuum          = true
 procname-prefix=TestRunTime
@@ -23,6 +23,6 @@ buffer-size=32768
 ignore-sigpipe=true
 ignore-write-errors=true
 disable-write-exception=true
-#logto = /home/miguel-wisphub/Documentos/Projects_Test/Project_WS/project_websocket/.logs/uwsgi/main_uwsgi.log
+logto = /home/miguel/Documentos/Projects_Test/Project_WS/project_websocket/.logs/uwsgi/main_uwsgi.log
 
 
