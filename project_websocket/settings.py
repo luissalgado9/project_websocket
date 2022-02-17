@@ -127,7 +127,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Celery settings
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
+#CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://172.31.47.55:6379'
 #CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
 
 #: Only add pickle to this list if your broker is secured

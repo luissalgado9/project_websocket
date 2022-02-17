@@ -17,10 +17,11 @@ def test_conexiones_websocket_tasks(self):
         broadcast=True
     )
 
-    
+    print("TASK STARTED")
     start_time = time.time()
     seconds = 20  # 2 minutes
     while True:
+        print("TASK PROGRESS")
         current_time = time.time()
         elapsed_time = current_time - start_time
 
@@ -46,7 +47,8 @@ def test_conexiones_websocket_tasks(self):
 
         count = count + 1
 
-    return ""
+    print("TASK FINISHED")
+    return meta
 
 
 def publish_message_websocket(redis_publisher, data):
