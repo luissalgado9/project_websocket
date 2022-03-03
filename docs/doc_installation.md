@@ -48,6 +48,8 @@ __1.8__ Run Project
 
      # Iniciar worker de forma manual
      celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"
+     # Flower
+     celery -A project_websocket flower --port=6655
 
      # O con supervisorctl -- Para configurarlo seguir los pasos del archivo: settings_supervisorctl.md ubicado en docs > supervisorctl de este proyecto
      
