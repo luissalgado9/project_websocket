@@ -273,6 +273,12 @@ sudo supervisorctl restart cFlower
     cd project_websocket/project_websocket/
     source ../env_project_websocket/bin/activate
     celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="ws_2@worker"
+ 
+### APP UWSGI
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    uwsgi --ini app_uwsgi.ini
 
 ### APP WEBSOCKET UWSGI
     cd
