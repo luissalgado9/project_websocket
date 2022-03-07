@@ -9,9 +9,12 @@ def home_view(request):
 
 
 def test_conexiones_websocket_view(request):
+
     URL_WEBSOCKET = 'ws://projectwebsocket.net/ws/'
-    #URL_WEBSOCKET = "ws://127.0.0.1:8000/ws/"
-    # Publish message websocket every 1 seg for 2 minutes.
+    origin = request.META.get('HTTP_REFERER')
+    if origin == 'http://projectwebsocketmaster.net/':
+        URL_WEBSOCKET = 'ws://projectwebsocketmaster.net/ws/'
+
     tasks = test_conexiones_websocket_tasks.delay()
 
     facility = tasks.id # UUID

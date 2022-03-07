@@ -87,9 +87,9 @@ TEMPLATES = [
 # WS4REDIS
 WEBSOCKET_URL = '/ws/'
 WS4REDIS_CONNECTION = {
-    'host': "127.0.0.1",
+    'host': "172.31.47.55",
     'port': "6379",
-    'db': "1",
+    'db': "2",
     'password': ""
 }
 WSGI_APPLICATION = 'ws4redis.django_runserver.application'
@@ -127,8 +127,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Celery settings
 
-#CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_BROKER_URL = 'redis://172.31.47.55:6379'
+CELERY_BROKER_URL = 'redis://localhost:6379'
+#CELERY_BROKER_URL = 'redis://172.31.47.55:6379'
 #CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
 
 #: Only add pickle to this list if your broker is secured

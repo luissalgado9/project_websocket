@@ -19,7 +19,7 @@ def test_conexiones_websocket_tasks(self):
 
     print("TASK STARTED")
     start_time = time.time()
-    seconds = 20  # 2 minutes
+    seconds = 4  # 2 minutes
     while True:
         print("TASK PROGRESS")
         current_time = time.time()
