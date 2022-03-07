@@ -48,6 +48,8 @@ __1.8__ Run Project
 
      # Iniciar worker de forma manual
      celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="celery_websocket@worker"
+     # Flower
+     celery -A project_websocket flower --port=6655
 
      # O con supervisorctl -- Para configurarlo seguir los pasos del archivo: settings_supervisorctl.md ubicado en docs > supervisorctl de este proyecto
      
@@ -234,5 +236,58 @@ sudo supervisorctl restart cFlower
     sudo supervisorctl restart cProjectWebsocket
     sudo supervisorctl restart cFlower
 
+# RUN PROJECT MANUALMENTE
+
+## SERVER MASTER
+ 
+### RUN WORKER
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="ws_1@worker"
+
+
+### APP UWSGI
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    uwsgi --ini app_uwsgi.ini
+
+### APP WEBSOCKET UWSGI
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    uwsgi --ini app_websocket.ini
+
+
+### LOG UWSGI WEBSOCKET SERVER MASTER
+    echo "" > /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/ws4redis1.log
+    sudo tail -f /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/ws4redis1.log
+
+
+
+## SERVER SLAVE
+
+### RUN WORKER
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    celery worker -A project_websocket --loglevel=INFO --queue=celery_websocket -n="ws_2@worker"
+ 
+### APP UWSGI
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    uwsgi --ini app_uwsgi.ini
+
+### APP WEBSOCKET UWSGI
+    cd
+    cd project_websocket/project_websocket/
+    source ../env_project_websocket/bin/activate
+    uwsgi --ini app_websocket.ini
+
+### LOG UWSGI WEBSOCKET SERVER SLAVE
+    echo "" > /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/ws4redis2.log
+    sudo tail -f /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/ws4redis2.log
 
     
