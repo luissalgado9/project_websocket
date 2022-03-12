@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'stdimage',
     'widget_tweaks',
     'ws4redis',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +89,7 @@ TEMPLATES = [
 # WS4REDIS
 WEBSOCKET_URL = '/ws/'
 WS4REDIS_CONNECTION = {
-    'host': "172.31.47.55",
+    'host': "127.0.0.1",
     'port': "6379",
     'db': "2",
     'password': ""
@@ -106,6 +108,8 @@ DATABASES = {
     }
 }
 
+# mychannels/settings.py
+ASGI_APPLICATION = "project_websocket.asgi.application"
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -164,3 +168,12 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
