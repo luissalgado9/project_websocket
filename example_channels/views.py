@@ -10,7 +10,7 @@ from example_channels.tasks import test_conexiones_django_channels
 
 
 def example_chat_django_channels(request):
-    URL_WEBSOCKET = 'ws://projectwebsocket.net:8000/ws/channel/100/'
+    URL_WEBSOCKET = 'ws://%s/ws/channel/100/' % request.headers.get('Host')
 
     return render(request, 'example_django_chanels.html', {'URL_WEBSOCKET': URL_WEBSOCKET})
 
@@ -18,7 +18,7 @@ def example_chat_django_channels(request):
 def example_django_channels(request):
     task = test_conexiones_django_channels.delay()
     facility = task.id
-    URL_WEBSOCKET = 'ws://projectwebsocket.net:8000/ws/channel/%s/' % facility
+    URL_WEBSOCKET = 'ws://%s/ws/channel/%s/' % (request.headers.get('Host'), facility)
 
     return render(request, 'example_django_chanels.html', {'URL_WEBSOCKET': URL_WEBSOCKET})
 
