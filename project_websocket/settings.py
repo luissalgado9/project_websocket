@@ -53,8 +53,8 @@ INSTALLED_APPS = [
     'stdimage',
     'widget_tweaks',
     'ws4redis',
-    'chat',
     'channels',
+    'example_channels',
 ]
 
 MIDDLEWARE = [
@@ -173,7 +173,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
+            "hosts": [("192.168.6.3", 6379)],
         },
     },
 }
