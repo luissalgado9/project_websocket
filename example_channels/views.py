@@ -18,7 +18,10 @@ def example_chat_django_channels(request):
 def example_django_channels(request):
     task = test_conexiones_django_channels.delay()
     facility = task.id
+    print(request.headers.get('Host'))
     URL_WEBSOCKET = 'ws://%s/ws/channel/%s/' % (request.headers.get('Host'), facility)
+
+    print(URL_WEBSOCKET)
 
     return render(request, 'example_django_chanels.html', {'URL_WEBSOCKET': URL_WEBSOCKET})
 
