@@ -13,6 +13,7 @@ with open(os.path.join(DIR_BASE, '.configs_proy/conf.json')) as json_file:
     confs = json.loads(json_file.read())
 
 # Vars WS4REDIS
+os.environ.setdefault("WS4REDIS_CONNECTION_HOST", confs['vars_ws4redis']['ws4redis_connection_host'])
 os.environ.setdefault("HEARTBEAT_ENABLED", confs['vars_ws4redis']['heartbeat_enabled'])
 os.environ.setdefault("WS4REDIS_HEARTBEAT", confs['vars_ws4redis']['ws4redis_heartbeat'])
 os.environ.setdefault("CELERY_BROKER_URL", confs['vars_ws4redis']['celery_broker_url'])

@@ -5,6 +5,7 @@
   },
   "vars_ws4redis": {
     "celery_broker_url": "redis://localhost:6379",
+    "ws4redis_connection_host": "127.0.0.1",
     "heartbeat_enabled": "false",
     "ws4redis_heartbeat": "--heartbeat-jacob--"
   },

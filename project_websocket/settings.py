@@ -88,7 +88,7 @@ TEMPLATES = [
 # WS4REDIS
 WEBSOCKET_URL = '/ws/'
 WS4REDIS_CONNECTION = {
-    'host': "127.0.0.1",
+    'host': os.environ['WS4REDIS_CONNECTION_HOST'],
     'port': "6379",
     'db': "2",
     'password': ""
