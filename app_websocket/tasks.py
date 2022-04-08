@@ -3,8 +3,9 @@ from ws4redis.publisher import RedisPublisher
 from ws4redis.redis_store import RedisMessage
 import json
 
+
 @shared_task(bind=True, queue="celery_websocket", soft_time_limit=1000)
-def test_conexiones_websocket_tasks(self):
+def test_conexiones_websocket_tasks(self, time_task, load_raise_error):
     """
     task publish message websocket every 1 seg for 2 minutes.
     """
@@ -19,7 +20,7 @@ def test_conexiones_websocket_tasks(self):
 
     print("TASK STARTED")
     start_time = time.time()
-    seconds = 4  # 2 minutes
+    seconds = time_task
     while True:
         print("TASK PROGRESS")
         current_time = time.time()
@@ -32,6 +33,9 @@ def test_conexiones_websocket_tasks(self):
         time.sleep(1)
         meta = {'mensaje': "'Status': 'PROGRESS' - Message # {0}".format(count), "status": "PROGRESS", "task_id": self.request.id}
         publish_message_websocket(redis_publisher, meta)
+
+        if load_raise_error:
+            int("load error")
 
         if elapsed_time > seconds:
             print("Finished iterating in: " + str(int(elapsed_time)) + " seconds")

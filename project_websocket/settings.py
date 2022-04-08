@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from distutils.util import strtobool
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,7 +88,7 @@ TEMPLATES = [
 # WS4REDIS
 WEBSOCKET_URL = '/ws/'
 WS4REDIS_CONNECTION = {
-    'host': "172.31.47.55",
+    'host': "127.0.0.1",
     'port': "6379",
     'db': "2",
     'password': ""
@@ -127,18 +128,26 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Celery settings
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
+#CELERY_BROKER_URL = 'redis://localhost:6379'
+#CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL')
 #CELERY_BROKER_URL = 'redis://172.31.47.55:6379'
 #CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
+CELERY_BROKER_URL = os.environ['CELERY_BROKER_URL']
 
 #: Only add pickle to this list if your broker is secured
 #: from unwanted access (see userguide/security.html)
+
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 #CELERY_ENABLE_UTC=True
-CELERY_TASK_RESULT_EXPIRES = 604800 # 7 dias
+CELERY_TASK_RESULT_EXPIRES = 604800  # 7 dias
+
+# env value set
+HEARTBEAT_ENABLED = bool(strtobool(os.environ.get('HEARTBEAT_ENABLED')))
+if HEARTBEAT_ENABLED:
+    WS4REDIS_HEARTBEAT = os.environ.get('WS4REDIS_HEARTBEAT')
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

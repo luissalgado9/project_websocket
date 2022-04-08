@@ -144,7 +144,7 @@ function taks_error(data) {
     }
 }
 
-function task_adminolt_ajax(facility) {
+function task_adminolt_ajax(facility, ws4redis_heartbeat) {
     /*si fuera necesario crear un receiveMessageAjax  y taks_error_ajax*/
     ws4redis = WS4Redis({
         uri: `${WEBSOCKET_URI}${facility}?subscribe-broadcast`,
@@ -152,6 +152,7 @@ function task_adminolt_ajax(facility) {
         connected: on_connected,
         receive_message: receiveMessage,
         disconnected: on_disconnected,
+        heartbeat_msg: ws4redis_heartbeat,
     });
     wS4Redis_instances[facility] = ws4redis;
 

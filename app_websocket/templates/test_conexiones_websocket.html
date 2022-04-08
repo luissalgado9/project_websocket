@@ -74,13 +74,15 @@
 
   <script type="text/javascript">
 
-  var key_facility = "{{facility}}" // facility
-  console.log(key_facility)
+  var key_facility = "{{facility}}";// facility
+  console.log(key_facility);
+  var ws4redis_heartbeat = "{{ ws4redis_heartbeat }}";
+  console.log(ws4redis_heartbeat);
 
   // To make the connection through websocket and obtain data, call the following function. 
   // Receive as argument: facility
   //This function is defined in the file. <script type="text/javascript" src="js/websocket.js"><script>
-  task_adminolt_ajax(key_facility)
+  task_adminolt_ajax(key_facility, ws4redis_heartbeat);
 
   //Once the connection to the websocket was successful and the status is "DONE"
   //You can use data inside the function. Passing data as argument
@@ -92,7 +94,7 @@
 
     // response data
     console.log(data)
-    const info = document.getElementById("info")
+    const info = document.getElementById("info");
     info.innerHTML = JSON.stringify(data);
   }
 

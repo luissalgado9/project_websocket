@@ -1,0 +1,15 @@
+{
+  "project": {
+    "time_task": "120",
+    "raise_error_tasks":  "false"
+  },
+  "vars_ws4redis": {
+    "celery_broker_url": "redis://localhost:6379",
+    "heartbeat_enabled": "false",
+    "ws4redis_heartbeat": "--heartbeat-jacob--"
+  },
+  "urls_ws": {
+    "url_websocket_balancer": "0.0.0.0:8005",
+    "url_websocket_master": "projectwebsocketmaster.net"
+  }
+}
