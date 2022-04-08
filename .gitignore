@@ -4,6 +4,9 @@
 requirements.txt
 staticfiles
 
+# VAR ENVIRON #
+.configs_proy
+
 # Django #
 .idea
 .logs
