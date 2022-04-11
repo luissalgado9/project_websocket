@@ -63,3 +63,7 @@ uwsgi --ini app_websocket.ini
 echo "" > /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/ws4redis1.log
 sudo tail -f /home/ubuntu/project_websocket/project_websocket/.logs/uwsgi/ws4redis1.log
 ```
+
+
+### Vars ENV
+see documentation [here](configs.md)
