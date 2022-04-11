@@ -1,7 +1,7 @@
 This is a test project to do debug of **django-websocket-redis**.
 You can run this project with manage.py and behind a wsgi app server
 
-#RUN PROJECT WITH manage.py
+# RUN PROJECT WITH manage.py
 
 ![](https://i.ibb.co/Qp6Nf8F/MANAGE.png)
 
@@ -24,7 +24,7 @@ source ../env_project_websocket/bin/activate
 python manage.py runserver
 ```
 
-#RUN PROJECT WITH WSGI
+# RUN PROJECT WITH WSGI
 
 
 ![](https://i.ibb.co/82mhxdd/UWSGI.png)
