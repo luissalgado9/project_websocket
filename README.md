@@ -1,10 +1,24 @@
 This is a test project to do debug of **django-websocket-redis**.
-You can run this project with manage.py and behind a wsgi app server
 
-# RUN PROJECT WITH manage.py
+There are 3 possibilities to run this project
+
+- With python manage.py & a celery worker (just like the regular django project)
 
 ![](https://i.ibb.co/Qp6Nf8F/MANAGE.png)
 
+- With 2 wsgi applications servers & a celery worker (one application server for the **http requests** and one application server **websocket messages**) 
+
+![](https://i.ibb.co/ZKdHfbz/serverNG.png)
+
+- With load balancer server (pending ......)
+
+![](https://i.ibb.co/82mhxdd/UWSGI.png)
+
+
+You can run this project with manage.py and behind a wsgi app server
+
+
+# RUN PROJECT WITH manage.py
 
 
 ### Run worker
@@ -25,10 +39,6 @@ python manage.py runserver
 ```
 
 # RUN PROJECT WITH WSGI
-
-
-![](https://i.ibb.co/82mhxdd/UWSGI.png)
-
 
 
 ### Run worker
