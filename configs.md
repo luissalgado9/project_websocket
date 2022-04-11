@@ -1,3 +1,5 @@
+Edit: `sudo nano /home/ubuntu/project_websocket/project_websocket/.configs_proy/conf.json`
+
 ## time_task
 
 `argument`: required_argument
